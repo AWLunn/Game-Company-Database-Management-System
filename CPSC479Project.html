@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Company Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0ffff; /* Light blue background color */
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        th, td {
+            border: 1px solid #000; /* Black border color for table cells and headers */
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #d3d3d3; /* Darker gray background color for table headers */
+        }
+        .table-buttons {
+            margin-top: 10px;
+            margin-bottom: 100px
+        }
+        .table-buttons a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: #d3d3d3;
+            color: black;
+            border: 1px solid #000000;
+            border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Gaming Company Database</h1>
+
+    <h2>Player</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th>LastLogin</th>
+                <th>AccountBalance</th>
+                <th>PurchaseHistory</th>
+                <th>SubscriptionStatus</th>
+                <th>Registration_Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add rows -->
+        </tbody>
+    </table>
+    <div class="table-buttons">
+        <a href="{% url 'player_list' %}">Update Player</a>
+    </div>
+
+    <h2>Game</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>GameID</th>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Price</th>
+                <th>Platform</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add rows -->
+        </tbody>
+    </table>
+    <div class="table-buttons">
+        <a href="{% url 'game_list' %}">Update Game</a>
+    </div>
+
+    <h2>GameEngine</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>EngineID</th>
+                <th>Name</th>
+                <th>Version</th>
+                <th>License</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add rows  -->
+        </tbody>
+    </table>
+    <div class="table-buttons">
+        <a href="{% url 'gameEngine_list' %}">Update GameEngine</a>
+    </div>
+
+    <h2>Moderator</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ModID</th>
+                <th>Username</th>
+                <th>GamesModerated</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add rows -->
+        </tbody>
+    </table>
+    <div class="table-buttons">
+        <a href="{% url 'moderator_list' %}">Update Moderator</a>
+    </div>
+
+    <h2>Employee</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>EmployeeID</th>
+                <th>SIN</th>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>GamesWorkedOn</th>
+                <th>EmployeeType</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add rows -->
+        </tbody>
+    </table>
+    <div class="table-buttons">
+        <a href="{% url 'employee_list' %}">Update Employee</a>
+    </div>
+
+    <h2>Developer</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>EmployeeID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add rows -->
+        </tbody>
+    </table>
+    <div class="table-buttons">
+        <a href="{% url 'developer_list' %}">Update Developer</a>
+    </div>
+
+    <h2>SoundEngineer</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>EmployeeID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add rows -->
+        </tbody>
+    </table>
+    <div class="table-buttons">
+        <a href="{% url 'sound_engineer_list' %}">Update SoundEngineer</a>
+    </div>
+
+    <h2>DesignArtist</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>EmployeeID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add rows -->
+        </tbody>
+    </table>
+    <div class="table-buttons">
+        <a href="{% url 'design_artist_list' %}">Update DesignArtist</a>
+    </div>
+
+    <h2>Bug_Report</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>BugID</th>
+                <th>Severity</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add rows -->
+        </tbody>
+    </table>
+    <div class="table-buttons">
+        <a href="{% url 'bug_report_list' %}">Update Bug_Report</a>
+    </div>
+
+    <h2>Financial</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>FinancialID</th>
+                <th>Bank</th>
+                <th>Cost</th>
+                <th>ProfitToDate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add rows -->
+        </tbody>
+    </table>
+    <div class="table-buttons">
+        <a href="{% url 'financial_list' %}">Update Financial</a>
+    </div>
+
+    <h2>Marketing</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>CampaignID</th>
+                <th>Name</th>
+                <th>Budget</th>
+                <th>StartDate</th>
+                <th>EndDate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add rows -->
+        </tbody>
+    </table>
+    <div class="table-buttons">
+        <a href="{% url 'marketing_list' %}">Update Marketing</a>
+    </div>
+
+    <h2>Collaborations_Partnerships</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>CompanyID</th>
+                <th>Name</th>
+                <th>AgreementType</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add rows -->
+        </tbody>
+    </table>
+    <div class="table-buttons">
+        <a href="{% url 'collaborations_parternships_list' %}">Update Collaborations_Partnerships</a>
+    </div>
+
+</body>
+</html>
