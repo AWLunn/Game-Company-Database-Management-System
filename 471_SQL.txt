@@ -1,0 +1,433 @@
+CREATE TABLE Collaborations_Partnerships (
+    CompanyID INT PRIMARY KEY,
+    Name VARCHAR(30),
+    AgreementType VARCHAR(30)
+);
+
+INSERT INTO Collaborations_Partnerships (CompanyID, Name, AgreementType)
+VALUES (12345, 'examplecollaborations', 'exampleagreement');
+
+DELETE FROM Collaborations_Partnerships
+WHERE CompanyID = 12345;
+
+DELETE FROM Collaborations_Partnerships
+WHERE Name = 'examplename';
+
+DELETE FROM Collaborations_Partnerships
+WHERE AgreementType = 'exampleagreementtype';
+
+DELETE FROM Collaborations_Partnerships;
+
+UPDATE Collaborations_Partnerships
+SET AgreementType = 'NewAgreementType'
+WHERE Name = 'examplecompany';
+
+UPDATE Collaborations_Partnerships
+SET AgreementType = 'NewAgreementType', Name = 'NewName'
+WHERE CompanyID = 12345;
+
+UPDATE Collaborations_Partnerships
+SET AgreementType = 'NewAgreementType';
+
+---------------------------------------------------------------------------------
+CREATE TABLE Player (
+    Username VARCHAR(20) PRIMARY KEY,
+    Password VARCHAR(30),
+    Email VARCHAR(30),
+    LastLogin DATE,
+    AccountBalance INT,
+    PurchaseHistory TEXT,
+    SubscriptionStatus VARCHAR(10),
+    Registration_Date DATE
+);
+
+INSERT INTO Player (Username, Password, Email, LastLogin, AccountBalance, PurchaseHistory, SubscriptionStatus, Registration_Date)
+VALUES ('exampleuser', 'password123', 'user@example.com', '2001-01-01', 12345', '', 'Active', '2001-01-01');
+
+DELETE FROM Player
+WHERE Username = 'exampleusername';
+
+DELETE FROM Player
+WHERE LastLogin = '2001-01-01';
+
+DELETE FROM Player
+WHERE AccountBalance = 12345;
+
+DELETE FROM Player
+WHERE SubscriptionStatus = 'Inactive';
+
+DELETE FROM Player
+WHERE Registration_Date = '2001-01-01';
+
+DELETE FROM Player;
+
+UPDATE Player
+SET Password = 'NewPassword'
+WHERE Username = 'exampleusername';
+
+UPDATE Player
+SET Email = 'newemail@example.com'
+WHERE Username = 'exampleusername';
+
+UPDATE Player
+SET LastLogin = '2001-01-01'
+WHERE Username = 'exampleusername';
+
+UPDATE Player
+SET AccountBalance = 12345
+WHERE Username = 'exampleusername';
+
+UPDATE Player
+SET PurchaseHistory = 'NewPurchaseHistory'
+WHERE Username = 'exampleusername';
+
+UPDATE Player
+SET SubscriptionStatus = 'NewStatus'
+WHERE Username = 'exampleusername';
+
+UPDATE Player
+SET AccountBalance = 12345 + 12345
+WHERE Username = 'exampleusername';
+
+UPDATE Player
+SET Email = 'NewEmail', SubscriptionStatus = 'NewStatus'
+WHERE Username = 'exampleusername';
+
+UPDATE Player
+SET SubscriptionStatus = 'examplestatus'
+WHERE LastLogin < '2001-01-01';
+
+UPDATE Player
+SET Registration_Date = '2001-01-01'
+WHERE Registration_Date < '2001-01-01';
+
+UPDATE Player
+SET SubscriptionStatus = 'examplestaus';
+
+---------------------------------------------------------------------------------
+CREATE TABLE Moderator (
+    ModID INT PRIMARY KEY,
+    Username VARCHAR(20),
+    GamesModerated TEXT
+);
+
+INSERT INTO Moderator (ModID, Username, GamesModerated)
+VALUES (12345, 'exampleuser', '');
+
+DELETE FROM Moderator
+WHERE ModID = 12345;
+
+DELETE FROM Moderator
+WHERE Username = 'exampleusername';
+
+DELETE FROM Moderator;
+
+UPDATE Moderator
+SET Username = 'NewUsername'
+WHERE ModID = 12345;
+
+UPDATE Moderator
+SET GamesModerated = 'NewGameList'
+WHERE ModID = 12345;
+
+UPDATE Moderator
+SET Username = 'NewUsername', GamesModerated = 'NewGameList'
+WHERE ModID = 12345;
+
+---------------------------------------------------------------------------------
+CREATE TABLE Financial (
+    FinancialID INT PRIMARY KEY,
+    Bank VARCHAR(30),
+    Cost INT,
+    ProfitToDate INT
+);
+
+INSERT INTO Financial (FinancialID, Bank, Cost, ProfitToDate)
+VALUES (12345, 'examplebank', 12345, 12345);
+
+DELETE FROM Financial
+WHERE FinancialID = 12345;
+
+DELETE FROM Financial
+WHERE Bank = 'examplebank';
+
+DELETE FROM Financial
+WHERE Cost = 12345;
+
+DELETE FROM Financial
+WHERE ProfitToDate < 12345;
+
+DELETE FROM Financial
+WHERE ProfitToDate = 12345;
+
+DELETE FROM Financial
+WHERE ProfitToDate > 12345;
+
+DELETE FROM Financial;
+
+UPDATE Financial
+SET Bank = 'NewBankName'
+WHERE FinancialID = 12345;
+
+UPDATE Financial
+SET Cost = 12345
+WHERE FinancialID = 12345;
+
+UPDATE Financial
+SET ProfitToDate = 12345
+WHERE FinancialID = 12345;
+
+UPDATE Financial
+SET Cost = 12345;
+
+UPDATE Financial
+SET Cost = NewCost
+WHERE Condition;
+
+---------------------------------------------------------------------------------
+CREATE TABLE Game (
+    GameID INT PRIMARY KEY,
+    Title VARCHAR(30),
+    Genre VARCHAR(20),
+    Price INT,
+    Platform VARCHAR(30)
+);
+
+INSERT INTO Game (GameID, Title, Genre, Price, Platform)
+VALUES (12345, 'exampletitle', 'examplegenre', 12345, 'exampleplatform');
+
+DELETE FROM Game
+WHERE GameID = 12345;
+
+DELETE FROM Game
+WHERE Title = 'examplegame';
+
+DELETE FROM Game
+WHERE Genre = 'examplegenre';
+
+DELETE FROM Game
+WHERE Price = 12345;
+
+DELETE FROM Game
+WHERE Price > 12345;
+
+DELETE FROM Game
+WHERE Price < 12345;
+
+DELETE FROM Game
+WHERE Platform = 'exampleplatform';
+
+DELETE FROM Game;
+
+UPDATE Game
+SET Title = 'NewTitle'
+WHERE GameID = 12345;
+
+UPDATE Game
+SET Genre = 'NewGenre'
+WHERE GameID = 12345;
+
+UPDATE Game
+SET Price = 12345
+WHERE GameID = 12345;
+
+UPDATE Game
+SET Platform = 'NewPlatform'
+WHERE GameID = 12345;
+
+UPDATE Game
+SET Genre = 'NewGenre', Price = 12345
+WHERE GameID = 12345;
+
+---------------------------------------------------------------------------------
+CREATE TABLE Marketing (
+    CampaignID INT PRIMARY KEY,
+    Name VARCHAR(30),
+    Budget INT,
+    StartDate DATE,
+    EndDate DATE
+);
+
+INSERT INTO Marketing (CampaignID, Name, Budget, StartDate, EndDate)
+VALUES (12345, 'examplename', 12345, '2001-01-01', '2001-01-01');
+
+DELETE FROM Marketing
+WHERE CampaignID = 12345;
+
+DELETE FROM Marketing
+WHERE Name = 'examplecampaign';
+
+DELETE FROM Marketing
+WHERE Budget = 12345;
+
+DELETE FROM Marketing
+WHERE Budget > 12345;
+
+DELETE FROM Marketing
+WHERE Budget < 12345;
+
+DELETE FROM Marketing
+WHERE StartDate = '2001-01-01';
+
+DELETE FROM Marketing;
+
+UPDATE Marketing
+SET Name = 'NewName'
+WHERE CampaignID = 12345;
+
+UPDATE Marketing
+SET Budget = NewBudget
+WHERE CampaignID = 12345;
+
+UPDATE Marketing
+SET StartDate = NewStartDate
+WHERE CampaignID = 12345;
+
+UPDATE Marketing
+SET EndDate = NewEndDate
+WHERE CampaignID = 12345;
+
+---------------------------------------------------------------------------------
+CREATE TABLE GameEngine (
+    EngineID INT PRIMARY KEY,
+    Name VARCHAR(30),
+    Version INT,
+    License INT
+);
+
+INSERT INTO GameEngine (EngineID, Name, Version, License)
+VALUES (12345, 'examplename', 12345, 12345);
+
+DELETE FROM GameEngine
+WHERE Name = 'exampleengine';
+
+DELETE FROM GameEngine
+WHERE Version = 12345;
+
+DELETE FROM GameEngine
+WHERE License = 12345;
+
+DELETE FROM GameEngine;
+
+UPDATE GameEngine
+SET Name = 'NewName'
+WHERE EngineID = 12345;
+
+UPDATE GameEngine
+SET Version = NewVersion
+WHERE EngineID = 12345;
+
+UPDATE GameEngine
+SET License = 'NewLicenseType'
+WHERE EngineID = 12345;
+
+---------------------------------------------------------------------------------
+CREATE TABLE Bug_Report (
+    BugID INT PRIMARY KEY,
+    Severity VARCHAR(10),
+    Status VARCHAR(10)
+);
+
+INSERT INTO Bug_Report (BugID, Severity, Status)
+VALUES (12345, 'exampleseverity', 'examplestatus');
+
+DELETE FROM Bug_Report
+WHERE BugID = 12345;
+
+DELETE FROM Bug_Report
+WHERE Severity = 'exampleseverity';
+
+DELETE FROM Bug_Report
+WHERE Status = 'examplestatus';
+
+DELETE FROM Bug_Report;
+
+UPDATE Bug_Report
+SET Severity = 'NewSeverity'
+WHERE BugID = 12345;
+
+UPDATE Bug_Report
+SET Status = 'NewStatus'
+WHERE BugID = 12345;
+
+UPDATE Bug_Report
+SET Status = 'NewStatusForAll';
+
+UPDATE Bug_Report
+SET Status = 'New Status'
+WHERE Severity = 'Severity Level';
+
+---------------------------------------------------------------------------------
+CREATE TABLE Employee (
+    EmployeeID INT PRIMARY KEY,
+    SIN INT PRIMARY KEY,
+    Name VARCHAR(30),
+    Salary INT,
+    GamesWorkedOn TEXT
+    EmployeeType VARCHAR(20) NOT NULL
+);
+INSERT INTO Employee (EmployeeID, SIN, Name, Salary, GamesWorkedOn, EmployeeType)
+VALUES (12345, 12345, 'examplename', 12345, '', 'exampleemployeetype);
+
+DELETE FROM Employee
+WHERE EmployeeID = 12345;
+
+DELETE FROM Employee
+WHERE SIN = 12345;
+
+DELETE FROM Employee
+WHERE Name = 'examplename';
+
+DELETE FROM Employee
+WHERE Salary = 12345;
+
+DELETE FROM Employee
+WHERE GamesWorkedOn = 'examplegames';
+
+DELETE FROM Employee
+WHERE EmployeeType = 'exampletype';
+
+DELETE FROM Employee;
+
+UPDATE Employee
+SET Name = 'NewName'
+WHERE EmployeeID = 12345;
+
+UPDATE Employee
+SET Salary = NewSalary
+WHERE EmployeeID = 12345;
+
+UPDATE Employee
+SET GamesWorkedOn = 'NewGameList'
+WHERE EmployeeID = 12345;
+
+UPDATE Employee
+SET EmployeeType = 'NewEmployeeType'
+WHERE EmployeeID = 12345;
+
+UPDATE Employee
+SET Salary = 12345 + 5000
+WHERE EmployeeID = 12345;
+
+UPDATE Employee
+SET Salary = 12345 - 2000
+WHERE EmployeeID = 12345;
+
+UPDATE Employee
+SET Salary = 12345 + 5000
+WHERE EmployeeType = 'Employee Type';aaaaaaa
+
+CREATE TABLE SoundEngineer (
+    EmployeeID INT PRIMARY KEY,
+    FOREIGN KEY (EmployeeID) REFERENCES Employee(EmployeeID)
+);
+
+CREATE TABLE DesignArtist (
+    EmployeeID INT PRIMARY KEY,
+    FOREIGN KEY (EmployeeID) REFERENCES Employee(EmployeeID)
+);
+
+CREATE TABLE Developer (
+    EmployeeID INT PRIMARY KEY,
+    FOREIGN KEY (EmployeeID) REFERENCES Employee(EmployeeID)
+);
