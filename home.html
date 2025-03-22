@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0ffff; /* Light blue background color */
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        button {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: #d3d3d3;
+            color: white;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Player Management</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit" name="delete" value="delete">Delete</button>
+        <button type="submit" name="update" value="update">Update</button>
+    </form>
+
+</body>
+</html>
